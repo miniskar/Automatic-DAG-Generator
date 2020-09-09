@@ -143,7 +143,7 @@ def get_task_dag(config_yml,dag_path_plot):
 	dag = nx.DiGraph()
 	dag.add_edges_from(edge_d)
 	for i,t in enumerate(task_comp):
-		dag.node[str(i)]['comp'] = t
+		dag.nodes[str(i)]['comp'] = t
 		##NOTE: actually it should not be called 'comp', but 'computation data amount'!!!
 	if dag_path_plot is not None:
 		plot_dag(dag,dag_path_plot)
